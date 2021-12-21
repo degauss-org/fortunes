@@ -1,5 +1,7 @@
 #!/usr/local/bin/Rscript
 
+dht::qlibrary(sf)
+
 dht::greeting()
 
 doc <- "

@@ -19,6 +19,10 @@ RUN apt-get update \
     && apt-get install -yqq --no-install-recommends \
     libcurl4-openssl-dev \
     libssl-dev \
+    libudunits2-dev \
+    libgdal-dev \
+    libgeos-dev \
+    libproj-dev \
     && apt-get clean
 
 COPY renv.lock .
