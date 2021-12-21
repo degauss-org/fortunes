@@ -1,15 +1,15 @@
-# fortunes <a href='https://degauss.org'><img src='https://github.com/degauss-org/degauss_template/raw/master/DeGAUSS_hex.png' align='right' height='138.5' /></a>
+# fortunes <a href='https://degauss.org'><img src='https://github.com/degauss-org/degauss_template/raw/master/degauss_hex.png' align='right' height='138.5' /></a>
 
 > prints a random quote
 
 [![](https://img.shields.io/github/v/release/degauss-org/fortunes?color=469FC2&label=version&sort=semver)](https://github.com/degauss-org/fortunes/releases)
 
+[![container build status](https://github.com/degauss-org/fortunes/workflows/build & deploy/badge.svg)](https://github.com/degauss-org/fortunes/actions)
+
 ## DeGAUSS example call
 
-If `my_address_file_geocoded.csv` is a file in the current working directory with coordinate columns named `lat` and `lon`, then
-
 ```sh
-docker run --rm -v $PWD:/tmp ghcr.io/degauss/fortunes:0.1.0 my_address_file_geocoded.csv
+docker run --rm -v $PWD:/tmp ghcr.io/degauss/fortunes:0.1.1 my_address_file_geocoded.csv
 ```
 
 will print a random fortune from the {fortunes} package.

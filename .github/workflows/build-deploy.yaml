@@ -1,4 +1,4 @@
-name: Build & Deploy Docker Containers
+name: build & deploy
 on:
   # We'll trigger this workflow when a PR is submitted to make sure
   # your application still builds successfully with the new commits.
