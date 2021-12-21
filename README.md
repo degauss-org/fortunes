@@ -1,7 +1,8 @@
 # fortunes <a href='https://degauss.org'><img src='https://github.com/degauss-org/degauss_template/raw/master/DeGAUSS_hex.png' align='right' height='138.5' /></a>
 
 > prints a random quote
-[![](https://img.shields.io/github/v/tag/degauss-org/fortunes)](https://github.com/degauss-org/fortunes/releases)
+
+[![](https://img.shields.io/github/v/release/degauss-org/fortunes?color=469FC2&label=version&sort=semver)](https://github.com/degauss-org/fortunes/releases)
 
 ## DeGAUSS example call
 
