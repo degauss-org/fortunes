@@ -4,7 +4,7 @@
 
 [![](https://img.shields.io/github/v/release/degauss-org/fortunes?color=469FC2&label=version&sort=semver)](https://github.com/degauss-org/fortunes/releases)
 
-[![container build status](https://github.com/degauss-org/fortunes/workflows/build & deploy/badge.svg)](https://github.com/degauss-org/fortunes/actions)
+[![container build status](https://github.com/degauss-org/fortunes/workflows/build-deploy/badge.svg)](https://github.com/degauss-org/fortunes/actions)
 
 ## DeGAUSS example call
 
