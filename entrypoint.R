@@ -1,6 +1,7 @@
 #!/usr/local/bin/Rscript
 
 dht::qlibrary(sf)
+library(sf)
 
 dht::greeting()
 
