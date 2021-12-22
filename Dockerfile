@@ -17,6 +17,7 @@ WORKDIR /app
 
 RUN apt-get update \
     && apt-get install -yqq --no-install-recommends \
+    libgit2-dev \
     libcurl4-openssl-dev \
     libssl-dev \
     libudunits2-dev \
@@ -27,7 +28,7 @@ RUN apt-get update \
 
 COPY renv.lock .
 
-RUN R --quiet -e "renv::restore(repos = c(CRAN = 'https://packagemanager.rstudio.com/all/__linux__/focal/latest'))"
+RUN R --quiet -e "renv::restore(repos = c(CRAN = 'https://cran.rstudio.com'))"
 
 # COPY geomarker_data.rds .
 COPY entrypoint.R .
