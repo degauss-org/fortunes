@@ -1,7 +1,6 @@
 #!/usr/local/bin/Rscript
 
-dht::qlibrary(sf)
-library(sf)
+withr::with_message_sink("/dev/null", library(sf))
 
 dht::greeting()
 
