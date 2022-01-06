@@ -41,12 +41,12 @@ jobs:
           registry: ${{ env.registry }}
           username: ${{ env.username }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: deploy pull request container ${{ env.versioned }}
+      - name: deploy pull request container
         if: github.event_name == 'pull_request'
         run: |
           docker tag ${{ env.container }} ${{ env.versioned }}
           docker push ${{ env.versioned }}
-      - name: deploy release container ${{ env.versioned }}
+      - name: deploy release (and latest) container
         if: github.event_name == 'release'
         run: |
           docker tag ${{ env.container }} ${{ env.versioned }}
