@@ -2,7 +2,7 @@ FROM rocker/r-ver:4.1.2
 
 ENV degauss_name="fortunes"
 ENV degauss_version="0.1.3"
-ENV degauss_description="prints a random quote"
+ENV degauss_description="one random quote"
 
 # add labels based on environment variables too
 LABEL "org.degauss.name"="${degauss_name}"
