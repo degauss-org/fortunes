@@ -24,6 +24,7 @@ jobs:
           echo "versioned=${versioned}" >> $GITHUB_ENV
       - name: build container
         run: |
+          export DOCKER_BUILDKIT=1
           docker build -t ${{ env.container }} .
       - name: test run container
         run: |
