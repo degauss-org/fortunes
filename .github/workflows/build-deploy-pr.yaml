@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
       - name: create latest tag variable
         run: |
           container="${{ env.registry }}/${{ env.username}}/${{ env.repository }}:latest"
