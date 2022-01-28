@@ -5,6 +5,7 @@ build:
 
 test:
 	docker run --rm -v "${PWD}/test":/tmp fortunes my_address_file_geocoded.csv
+	docker run --rm -v "${PWD}/test":/tmp fortunes my_address_file_geocoded.csv 2
 
 shell:
 	docker run --rm -it --entrypoint=/bin/bash -v "${PWD}/test":/tmp fortunes
