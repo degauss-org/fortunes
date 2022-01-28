@@ -2,12 +2,14 @@ FROM rocker/r-ver:4.1.2
 
 ENV degauss_name="fortunes"
 ENV degauss_version="0.1.3"
-ENV degauss_description="one random quote"
+ENV degauss_description="random quotes"
+ENV degauss_argument="number of quotes to print [default=1]"
 
 # add labels based on environment variables too
 LABEL "org.degauss.name"="${degauss_name}"
 LABEL "org.degauss.version"="${degauss_version}"
 LABEL "org.degauss.description"="${degauss_description}"
+LABEL "org.degauss.argument"="${degauss_argument}"
 
 RUN R --quiet -e "install.packages('remotes', repos = c(CRAN = 'https://packagemanager.rstudio.com/all/__linux__/focal/latest'))"
 
