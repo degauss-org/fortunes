@@ -130,15 +130,15 @@
     },
     "dht": {
       "Package": "dht",
-      "Version": "0.3.0",
+      "Version": "0.4.3",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "degauss-org",
       "RemoteRepo": "dht",
       "RemoteRef": "master",
-      "RemoteSha": "a6c88bed4c2bce04109a555487feec92000dc4d2",
-      "Hash": "06a74d6d33a3ae15b2374ce832b2d902"
+      "RemoteSha": "e4e4143074dc48733799b2e0bdb3028789958f70",
+      "RemoteHost": "api.github.com",
+      "Hash": "09083722a59e842d25b0ec51e3d713df"
     },
     "docopt": {
       "Package": "docopt",
