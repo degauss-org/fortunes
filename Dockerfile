@@ -30,7 +30,7 @@ RUN apt-get update \
 
 COPY renv.lock .
 
-RUN R --quiet -e "renv::restore(repos = c(CRAN = 'https://cran.rstudio.com'))"
+RUN R --quiet -e "options(HTTPUserAgent = sprintf('R/%s R (%s)', getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os))); renv::restore(repos = c(CRAN = 'https://packagemanager.rstudio.com/all/__linux__/focal/latest'))"
 
 # COPY geomarker_data.rds .
 COPY entrypoint.R .
