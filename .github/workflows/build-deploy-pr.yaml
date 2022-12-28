@@ -12,7 +12,11 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
       - name: create latest tag variable
         run: |
           container="${{ env.registry }}/${{ env.username}}/${{ env.repository }}:latest"
@@ -34,7 +38,12 @@ jobs:
           registry: ${{ env.registry }}
           username: ${{ env.username }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: deploy pull request container
-        run: |
-          docker tag ${{ env.container }} ${{ env.versioned }}
-          docker push ${{ env.versioned }}
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ${{ env.container }}
+            ${{ env.versioned }}

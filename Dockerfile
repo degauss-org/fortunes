@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.1.2
+FROM --platform=$BUILDPLATFORM rocker/r-ver:4.1.2
 
 ENV degauss_name="fortunes"
 ENV degauss_version="0.1.3"
@@ -38,3 +38,10 @@ COPY entrypoint.R .
 WORKDIR /tmp
 
 ENTRYPOINT ["/app/entrypoint.R"]
+
+ARG TARGETPLATFORM
+RUN compile --target=$TARGETPLATFORM -o /out/mybinary
+
+FROM rocker/r-ver:4.1.2
+COPY --from=build /out/mybinary /bin
+
